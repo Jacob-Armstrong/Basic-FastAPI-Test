@@ -1,7 +1,7 @@
 [project]
-name = "gametest1"
+name = "Basic-FastAPI-Test"
 version = "0.1.0"
-description = "Add your description here"
+description = "A basic implementation of FastAPI"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

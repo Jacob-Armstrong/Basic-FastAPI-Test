@@ -18,12 +18,13 @@ cd Basic-FastAPI-Test
 ### Install dependencies
 ```
 uv venv
+.\.venv\Scripts\activate
 uv pip install -r requirements.txt
 ```
 
 ### Run the FastAPI Server
 ```
-fastapi run main.py
+fastapi run
 ```
 
 ### Access the API documentation
