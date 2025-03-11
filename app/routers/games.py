@@ -42,12 +42,12 @@ def get_games():
 @router.get("/games/{title}", response_model=Game)
 def get_game(title: str):
 
-    game = next(game for game in gameList if game.title == title)
+    game = next((game for game in gameList if game.title == title), None)
 
     if game is None:
         raise HTTPException(status_code=404, detail=f"{title} could not be found.")
-    else:
-        return game
+    
+    return game
 
 @router.post("/games")
 def post_game(game: Game):

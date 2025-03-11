@@ -38,9 +38,9 @@ def get_publishers():
 
 @router.get("/publishers/{title}", response_model=Publisher)
 def get_publisher(title: str):
-    publisher = next(publisher for publisher in publisherList if publisher.title == title)
+    publisher = next((publisher for publisher in publisherList if publisher.title == title), None)
 
     if publisher is None:
         raise HTTPException(status_code=404, detail=f"{title} was not in the list of publishers.")
-    else:
-        return publisher
+    
+    return publisher
