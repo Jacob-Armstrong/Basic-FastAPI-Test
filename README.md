@@ -18,7 +18,6 @@ cd Basic-FastAPI-Test
 ### Install dependencies
 ```
 uv venv
-.\.venv\Scripts\activate
 uv pip install -r requirements.txt
 ```
 
